@@ -4,7 +4,7 @@ echo "  Dir: $PWD"
 sh get-nuget.sh
 sh nuget-update-self.sh
 
-sh install-package.sh BridgeArduinoSerialToMqttSplitCsv 1.0.0.44
+sh install-package.sh BridgeArduinoSerialToMqttSplitCsv 1.0.1.2
 sh install-package.sh NUnit 2.6.4
 sh install-package.sh NUnit.Runners 2.6.4
 sh install-package.sh Newtonsoft.Json 11.0.2
