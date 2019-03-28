@@ -10,13 +10,11 @@ pipeline {
             }
         }
         stage('Prepare') {
-            when { expression { !shouldSkipBuild() } }
             steps {
                 sh 'echo "Prepare disabled to speed up tests." # sh prepare.sh'
             }
         }
         stage('Test') {
-            when { expression { !shouldSkipBuild() } }
             steps {
                 sh 'echo "Hello world"'
             }
@@ -42,9 +40,6 @@ pipeline {
             )
         }
     }
-}
-Boolean shouldSkipBuild() {
-    return sh( script: 'sh check-ci-skip.sh', returnStatus: true )
 }
 def shHide(cmd) {
     sh('#!/bin/sh -e\n' + cmd)
