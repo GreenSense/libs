@@ -24,9 +24,9 @@ sh push-version.sh && \
 
 #sh inject-version.sh && \
 
-sh graduate.sh && \
+#sh graduate.sh && \
 
-git checkout master && \
+#git checkout master && \
 
 sh build.sh && \
 
